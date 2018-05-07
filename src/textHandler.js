@@ -101,7 +101,7 @@ const notImplemented = (request, response, params, responseType) => {
 const notFound = (request, response, params, responseType) => {
   const notFoundContent = {
     message: 'The page you are looking for was not found.',
-    id: 'unauthorized',
+    id: 'notFound',
   };
 
   returnText(request, response, 404, responseType, notFoundContent);
