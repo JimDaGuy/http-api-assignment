@@ -30,7 +30,7 @@ const onRequest = (request, response) => {
   let acceptedTypes = request.headers.accept.split(',') || ['application/json'];
 
   // Set direct link requests to default to json
-  if (urlStruct[path] && acceptedTypes[0] === 'text/html') { acceptedTypes = ['application/json']; }
+  if (acceptedTypes[0] === 'text/html') { acceptedTypes = ['application/json']; }
 
   if (path === '/') {
     acceptedTypes = ['text/html'];
